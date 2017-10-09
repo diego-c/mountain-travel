@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+body {
+    margin:  0;
+    font-family: 'Lato', sans-serif;
+}
+/* Header 100vh */
+header {
+    height: 100vh;
+    background: url('img/mountain.jpg');
+    background-size: cover;
+}
+/* Navbar */
+nav {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    top: 3vh;
+}
+nav a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    word-spacing: .3rem;
+    font-weight: 300;
+    letter-spacing: .05rem;  
+    color: #172835;  
+}
+nav > div#nav-title {
+    flex: 1 10 50vw;
+    margin-left: 10vw;
+}
+nav > div#nav-title > a {
+    font-size: 1.5rem;
+}
+nav > div#nav-items {
+    flex: 1 0 30vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 10vw;
+}
+
+/* Responsive navbar */
+@media screen and (max-width: 576px)
+{
+    nav > div#nav-title {
+        margin-left: 5vw;
+        flex: 1 1 40vw;
+    }
+    nav > div#nav-items {
+        flex: 1 0 200px;
+        justify-content: space-between;
+        margin-right: 5vw;
+    }
+    nav a {
+        font-size: 1rem;
+    }
+    nav > div#nav-title > a {
+    font-size: 1.3rem;
+}
+
+}
+@media screen and (min-width: 576px) and (max-width: 992px)
+{
+    nav > div#nav-items {
+        flex: 1 0 300px;
+    }
+}
+
+/* End Navbar */
+/* Header */
+div#header-title {
+    text-align: center;
+    padding-top: 20vh;    
+}
+#header-title > h1 {
+    font-size: 2rem;
+    margin-bottom: 10vh;
+    color: #072842; 
+    word-spacing: .5rem;
+}
+#header-title > h2 {
+    text-transform: capitalize;
+    margin-bottom: 10vh;
+    color: #072842; 
+    word-spacing: .5rem;
+}
+#header-title a {
+    text-transform: uppercase;
+    text-decoration: none;
+    background: blue;
+    color: white;
+    border-radius: 5px;
+    word-spacing: .2rem;
+    letter-spacing: .08rem;
+    padding: 20px;
+}
