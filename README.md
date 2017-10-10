@@ -4,5 +4,5 @@ A project for the Advanced Web Developer Bootcamp course on Udemy led by Colt St
 # Todo
 * ~Finish page content~ :white_check_mark:
 * Adjust colors
-* Add animations
+* ~Add animations~ :white_check_mark:
 * Make it responsive

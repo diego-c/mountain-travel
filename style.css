@@ -44,6 +44,16 @@ nav > div#nav-items {
 div#header-title {
     text-align: center;
     padding-top: 20vh;    
+    position: relative;
+    top: 15vh;
+    opacity: 0;
+    animation: appear 1.5s forwards;
+}
+@keyframes appear {
+    to {
+    transform: translateY(-15vh);
+    opacity: 1;
+    }
 }
 #header-title > h1 {
     font-size: 2.5rem;
@@ -264,8 +274,8 @@ section#learn-more > div#mail-wrapper > form {
 }
 section#learn-more > div#mail-wrapper > form > input[type="email"] {
     font-size: 1.3rem;
-    flex: 0 1 300px;
-    margin-right: 5vw;
+    flex: 0 1 500px;
+    margin-right: 3vw;
     padding: 13px 10px;
 }
 section#learn-more > div#mail-wrapper > form > button[type="submit"] {
@@ -296,7 +306,7 @@ footer {
 }
 footer > div#social-media {
     order: -1;
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin-bottom: 5vh;
 }
 footer > div#social-media > a {
