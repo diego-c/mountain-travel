@@ -326,7 +326,9 @@ footer > div#social-media {
     font-size: 2.5rem;
     margin-bottom: 5vh;
 }
-footer > div#social-media > i.fa {
+footer > div#social-media > a {
+    color: white;
+    text-decoration: none;
     margin: 0 .5vw;
 }
 footer > p:first-of-type > a[href="https://www.unsplash.com"] {
