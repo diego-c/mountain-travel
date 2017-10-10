@@ -109,7 +109,8 @@ section > div#destinations {
 section > div#destinations > h3 {
     text-transform: capitalize;
     font-size: 1.8rem;
-    letter-spacing: .06rem;
+    letter-spacing: .08rem;
+    word-spacing: .3rem;
 }
 div#destinations > p {
     font-size: 1.3rem;  
@@ -152,7 +153,7 @@ section > div#tour-packages {
 section > div#tour-packages > h3 {
     text-transform: capitalize;
     font-size: 1.8rem;
-    letter-spacing: .06rem;
+    letter-spacing: .08rem;
 }
 div#tour-packages > p {
     padding: 0 15vw;
@@ -164,7 +165,7 @@ div#tour-packages > p {
 div#tour-packages > p::after {
     content: "";
     position: absolute;
-    top: 25vh;
+    top: 150px;
     left: 40vw;
     width: 20vw;
     border: 1.5px solid lightskyblue;;
@@ -211,11 +212,18 @@ section#testemonials > div#testemonials-header {
 section#testemonials > div#testemonials-header > h3 {
     text-transform: capitalize;
     font-size: 1.8rem;
-    letter-spacing: .06rem;
+    letter-spacing: .08rem;
     position: relative;
-    border-bottom: 2px solid blue;
-    padding-bottom: 5vh;
-    display: inline-block;
+    margin-bottom: 20vh;
+}
+section#testemonials > div#testemonials-header > h3::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 40vw;
+    width: 20vw;
+    border: 1.5px solid blue;
+    background: blue;
 }
 section#testemonials > div:nth-of-type(2) {
     display: flex;
@@ -238,4 +246,65 @@ section#testemonials blockquote.testemonial cite {
     font-style: initial;
     display: block;
     font-size: 1.1rem;
+}
+
+/* End Testemonials */
+/* Learn More */
+
+section#learn-more {
+    text-align: center;
+    background: #eae8f2;
+    padding: 10vh 0;
+    margin: 0 auto;
+}
+section#learn-more > div#lm-header > h3 {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    letter-spacing: .08rem;
+    word-spacing: .5rem;
+    position: relative;
+    margin-bottom: 8vh;
+    margin-top: 0;
+}
+section#learn-more > div#lm-header > p {
+    position: relative;
+    padding: 0 20vw;
+    margin-bottom: 25vh;
+    font-size: 1.3rem;
+    letter-spacing: .05rem;
+    line-height: 2;
+}
+section#learn-more > div#lm-header > p::after {
+    content: "";
+    position: absolute;
+    top: 220px;
+    left: 40vw;
+    width: 20vw;
+    border: 1.5px solid blue;
+    background: blue;
+}
+section#learn-more > div#mail-wrapper > form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+section#learn-more > div#mail-wrapper > form > input[type="email"] {
+    font-size: 1.3rem;
+    flex: 0 1 300px;
+    margin-right: 5vw;
+    padding: 13px 10px;
+}
+section#learn-more > div#mail-wrapper > form > button[type="submit"] {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    padding: 17px 30px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background: blue;
+    color: white;
+    font-weight: 700;
 }
