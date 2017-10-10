@@ -308,3 +308,28 @@ section#learn-more > div#mail-wrapper > form > button[type="submit"] {
     color: white;
     font-weight: 700;
 }
+
+/* End Learn More */
+/* Footer */
+footer {
+    background: #414a4f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8vh 5vw;
+    text-transform: uppercase;
+}
+footer > div#social-media {
+    order: -1;
+    font-size: 2.5rem;
+    margin-bottom: 5vh;
+}
+footer > div#social-media > i.fa {
+    margin: 0 .5vw;
+}
+footer > p:first-of-type > a[href="https://www.unsplash.com"] {
+    color: #b8f2d0;
+    text-decoration: none;
+}
