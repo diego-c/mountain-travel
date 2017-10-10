@@ -39,33 +39,6 @@ nav > div#nav-items {
     margin-right: 10vw;
 }
 
-/* Responsive navbar */
-@media screen and (max-width: 576px)
-{
-    nav > div#nav-title {
-        margin-left: 5vw;
-        flex: 1 1 40vw;
-    }
-    nav > div#nav-items {
-        flex: 1 0 200px;
-        justify-content: space-between;
-        margin-right: 5vw;
-    }
-    nav a {
-        font-size: 1rem;
-    }
-    nav > div#nav-title > a {
-    font-size: 1.3rem;
-}
-
-}
-@media screen and (min-width: 576px) and (max-width: 992px)
-{
-    nav > div#nav-items {
-        flex: 1 0 300px;
-    }
-}
-
 /* End Navbar */
 /* Header */
 div#header-title {
