@@ -19,7 +19,7 @@ nav {
 }
 nav a {
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     word-spacing: .3rem;
     font-weight: 300;
     letter-spacing: .05rem;  
@@ -73,16 +73,17 @@ div#header-title {
     padding-top: 20vh;    
 }
 #header-title > h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 10vh;
     color: #072842; 
     word-spacing: .5rem;
 }
 #header-title > h2 {
     text-transform: capitalize;
-    margin-bottom: 10vh;
+    margin-bottom: 15vh;
     color: #072842; 
-    word-spacing: .5rem;
+    font-size: 1.8rem;
+    word-spacing: .4rem;
 }
 #header-title a {
     text-transform: uppercase;
@@ -91,6 +92,150 @@ div#header-title {
     color: white;
     border-radius: 5px;
     word-spacing: .2rem;
+    font-weight: 700;
+    font-size: 1.1rem;
     letter-spacing: .08rem;
-    padding: 20px;
+    padding: 20px 30px;
+}
+
+/* End Header */
+/* Destinations */
+section {
+    margin: 10vh auto;
+}
+section > div#destinations {
+    text-align: center;
+}
+section > div#destinations > h3 {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    letter-spacing: .06rem;
+}
+div#destinations > p {
+    font-size: 1.3rem;  
+    margin: 10vh auto;  
+    position: relative;    
+}
+div#destinations > p:nth-of-type(2)::after {
+    content: "";
+    position: absolute;
+    top: 20vh;
+    left: 40vw;
+    width: 20vw;
+    border: 1.5px solid red;
+    background: red;
+}
+/* End Destinations Header */
+/* Gallery */
+section > div#gallery {
+    margin-top: 30vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+div#gallery > figure > img {
+    width: 100%;
+}
+div#gallery > figure {
+    flex: 1 1 30%;
+}
+/* End Gallery */
+/* Tour Packages */
+section#packages {
+    background: #eae8f2;
+    padding: 8vh 0;
+    margin-bottom: 0;
+}
+section > div#tour-packages {
+    text-align: center;
+}
+section > div#tour-packages > h3 {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    letter-spacing: .06rem;
+}
+div#tour-packages > p {
+    padding: 0 15vw;
+    font-size: 1.3rem;  
+    line-height: 2.5;
+    margin: 10vh auto;  
+    position: relative;    
+}
+div#tour-packages > p::after {
+    content: "";
+    position: absolute;
+    top: 25vh;
+    left: 40vw;
+    width: 20vw;
+    border: 1.5px solid lightskyblue;;
+    background: lightskyblue;
+}
+
+div#trips {
+    margin: 10vh auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+div#trips div.trip {
+    text-align: center;
+}
+div.trip {
+    padding: 0 5%;
+    margin: 10vh auto;
+    flex: 1 1 40%;
+}
+div.trip i {
+    font-size: 4rem;
+    color: #6f60e0;
+}
+div.trip h4 {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+div.trip p {
+    font-size: 1.3rem;
+    line-height: 2.5;
+}
+
+/* End Tour Packages */
+/* Testemonials */
+section#testemonials {
+   padding: 8vh 0;
+   width: 100%;
+   margin: 0 auto;
+}
+section#testemonials > div#testemonials-header {
+    text-align: center;
+}
+section#testemonials > div#testemonials-header > h3 {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    letter-spacing: .06rem;
+    position: relative;
+    border-bottom: 2px solid blue;
+    padding-bottom: 5vh;
+    display: inline-block;
+}
+section#testemonials > div:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+section#testemonials blockquote.testemonial {
+    flex: 1 1 30%;
+    text-align: center;
+    padding: 0 2vw;
+    margin-bottom: 5vh;
+}
+section#testemonials blockquote.testemonial p {
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 2;
+    margin-bottom: 8vh;
+}
+section#testemonials blockquote.testemonial cite {
+    font-style: initial;
+    display: block;
+    font-size: 1.1rem;
 }
