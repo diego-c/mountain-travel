@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 
+*, *::after, *::before {
+    box-sizing: border-box;
+}
 body {
     margin:  0;
     font-family: 'Lato', sans-serif;
@@ -7,8 +10,19 @@ body {
 /* Header 100vh */
 header {
     height: 100vh;
+    z-index: 2;
+}
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: url('img/mountain.jpg');
     background-size: cover;
+    opacity: 0.6;
+    z-index: 0;
 }
 /* Navbar */
 nav {
@@ -16,26 +30,31 @@ nav {
     align-items: baseline;
     position: relative;
     top: 3vh;
+    z-index: 2;
 }
 nav a {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 2rem;
     word-spacing: .3rem;
     font-weight: 300;
     letter-spacing: .05rem;  
-    color: #172835;  
+    color: #172835; 
+    opacity: 0.6; 
+}
+nav a:hover {
+    opacity: 1;
 }
 nav > div#nav-title {
     flex: 1 10 50vw;
     margin-left: 10vw;
 }
 nav > div#nav-title > a {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
 }
 nav > div#nav-items {
     flex: 1 0 30vw;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-right: 10vw;
 }
 
@@ -56,7 +75,7 @@ div#header-title {
     }
 }
 #header-title > h1 {
-    font-size: 2.5rem;
+    font-size: 3.2rem;
     margin-bottom: 10vh;
     color: #072842; 
     word-spacing: .5rem;
@@ -65,7 +84,7 @@ div#header-title {
     text-transform: capitalize;
     margin-bottom: 15vh;
     color: #072842; 
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     word-spacing: .4rem;
 }
 #header-title a {
@@ -76,9 +95,9 @@ div#header-title {
     border-radius: 5px;
     word-spacing: .2rem;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     letter-spacing: .08rem;
-    padding: 20px 30px;
+    padding: 30px 40px;
 }
 
 /* End Header */
@@ -89,30 +108,28 @@ section {
 section > div#destinations {
     text-align: center;
 }
-section > div#destinations > h3 {
+section h3 {
     text-transform: capitalize;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     letter-spacing: .08rem;
     word-spacing: .3rem;
 }
 div#destinations > p {
-    font-size: 1.3rem;  
+    font-size: 2rem;  
     margin: 10vh auto;  
     position: relative;    
 }
-div#destinations > p:nth-of-type(2)::after {
-    content: "";
-    position: absolute;
-    top: 20vh;
-    left: 40vw;
-    width: 20vw;
-    border: 1.5px solid red;
+hr {
+    width: 250px;
+    height: 4px;
+    border: none;
     background: red;
+    margin-bottom: 5vh;   
 }
 /* End Destinations Header */
 /* Gallery */
 section > div#gallery {
-    margin-top: 30vh;
+    margin-top: 10vh;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -135,29 +152,24 @@ section > div#tour-packages {
 }
 section > div#tour-packages > h3 {
     text-transform: capitalize;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     letter-spacing: .08rem;
 }
 div#tour-packages > p {
     padding: 0 15vw;
-    font-size: 1.3rem;  
+    font-size: 2rem;  
     line-height: 2.5;
     margin: 10vh auto;  
     position: relative;    
 }
-div#tour-packages > p::after {
-    content: "";
-    position: absolute;
-    top: 150px;
-    left: 40vw;
-    width: 20vw;
-    border: 1.5px solid lightskyblue;;
-    background: lightskyblue;
+hr#tp-divider {
+    background: lightskyblue;    
 }
 
 div#trips {
-    margin: 10vh auto;
+    margin: 0 auto;
     display: flex;
+    align-items: baseline;
     flex-wrap: wrap;
     width: 100%;
 }
@@ -169,8 +181,17 @@ div.trip {
     margin: 10vh auto;
     flex: 1 1 40%;
 }
+#trips > div > h4 {
+    font-size: 2rem;
+    letter-spacing: .08rem;
+}
+div#trips > div.trip > p {
+    font-size: 1.7rem;
+    letter-spacing: .05rem;
+    word-spacing: .15rem;
+}
 div.trip i {
-    font-size: 4rem;
+    font-size: 6rem;
     color: #6f60e0;
 }
 div.trip h4 {
@@ -194,19 +215,12 @@ section#testemonials > div#testemonials-header {
 }
 section#testemonials > div#testemonials-header > h3 {
     text-transform: capitalize;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     letter-spacing: .08rem;
     position: relative;
-    margin-bottom: 20vh;
 }
-section#testemonials > div#testemonials-header > h3::after {
-    content: "";
-    position: absolute;
-    top: 100px;
-    left: 40vw;
-    width: 20vw;
-    border: 1.5px solid blue;
-    background: blue;
+hr#testemonials-divider {
+    background: purple;
 }
 section#testemonials > div:nth-of-type(2) {
     display: flex;
@@ -221,14 +235,14 @@ section#testemonials blockquote.testemonial {
 }
 section#testemonials blockquote.testemonial p {
     font-weight: 300;
-    font-size: 1.3rem;
+    font-size: 2rem;
     line-height: 2;
     margin-bottom: 8vh;
 }
 section#testemonials blockquote.testemonial cite {
     font-style: initial;
     display: block;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
 }
 
 /* End Testemonials */
@@ -237,34 +251,28 @@ section#testemonials blockquote.testemonial cite {
 section#learn-more {
     text-align: center;
     background: #eae8f2;
-    padding: 10vh 0;
+    padding: 8vh 0 10vh;
     margin: 0 auto;
 }
 section#learn-more > div#lm-header > h3 {
     text-transform: capitalize;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     letter-spacing: .08rem;
     word-spacing: .5rem;
-    position: relative;
-    margin-bottom: 8vh;
+    position: relative;    
     margin-top: 0;
 }
 section#learn-more > div#lm-header > p {
     position: relative;
     padding: 0 20vw;
-    margin-bottom: 25vh;
-    font-size: 1.3rem;
+    font-size: 2rem;
     letter-spacing: .05rem;
     line-height: 2;
+    margin: 8vh auto;
 }
-section#learn-more > div#lm-header > p::after {
-    content: "";
-    position: absolute;
-    top: 220px;
-    left: 40vw;
-    width: 20vw;
-    border: 1.5px solid blue;
-    background: blue;
+hr#lm-divider {
+    background: #25b277;
+    margin-bottom: 15vh;
 }
 section#learn-more > div#mail-wrapper > form {
     display: flex;
@@ -273,16 +281,16 @@ section#learn-more > div#mail-wrapper > form {
     align-items: center;
 }
 section#learn-more > div#mail-wrapper > form > input[type="email"] {
-    font-size: 1.3rem;
+    font-size: 2rem;
     flex: 0 1 500px;
     margin-right: 3vw;
-    padding: 13px 10px;
+    padding: 23px 10px;
 }
 section#learn-more > div#mail-wrapper > form > button[type="submit"] {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     letter-spacing: .05rem;
-    padding: 17px 30px;
+    padding: 25px 30px;
     border: none;
     border-radius: 5px;
     outline: none;
@@ -304,9 +312,12 @@ footer {
     padding: 8vh 5vw;
     text-transform: uppercase;
 }
+footer > p {
+    font-size: 1.5rem;
+}
 footer > div#social-media {
     order: -1;
-    font-size: 4rem;
+    font-size: 6rem;
     margin-bottom: 5vh;
 }
 footer > div#social-media > a {
