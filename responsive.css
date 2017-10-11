@@ -24,18 +24,56 @@
         margin-left: 5vw;
         flex: 1 1 30vw;
     }
+     nav a {
+        font-size: 1.5rem;
+    }
+     nav > div#nav-title > a {
+    font-size: 1.8rem;
+}
     nav > div#nav-items {
-        flex: 1 0 250px;
+        flex: 1 0 350px;
         margin-right: 0;
+        justify-content: space-around;
+    }
+}
+@media screen and (min-width: 992px)
+{
+    nav > div#nav-items {
+        flex: 1 0 500px;
+        margin-right: 5vw;
     }
 }
 
 /* End Navbar */
 /* Responsive Header */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px)
+{
+    div#header-title {
+        padding: 15vh 10vw;
+    }
+    div#header-title > h1 {
+        font-size: 2.4rem;
+    }
+    #header-title > h2 {
+        font-size: 1.7rem;
+    }
+    #header-title a {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
     div#header-title {
         padding: 20vh 5vw;
-    }    
+    }
+    div#header-title > h1 {
+        font-size: 2.8rem;
+    }
+    #header-title > h2 {
+        font-size: 2.1rem;
+    }   
+    #header-title a {
+        font-size: 1.4rem;
+    } 
 }
 /* End Header */
 /* Destinations */
@@ -90,6 +128,9 @@
     section#testemonials > div:nth-of-type(2) {
         flex-direction: column;
     }
+    section#testemonials > div#testemonials-header > h3 {
+        font-size: 2.1rem;
+    }
 }
 /* End Testemonials */
 /* Learn More */
@@ -98,6 +139,11 @@
     section#learn-more > div#mail-wrapper > form > input[type="email"] {
         margin-bottom: 5vh;
         margin-right: 0;
+        padding: 15px 0;
+        max-width: 95%;
+    }
+    section#learn-more > div#mail-wrapper > form > button[type="submit"] {
+        font-size: 1.4rem;
     }
 }
 /* End Learn more */
