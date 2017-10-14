@@ -46,7 +46,25 @@
 
 /* End Navbar */
 /* Responsive Header */
-@media screen and (max-width: 768px)
+@media screen and (max-width: 576px)
+{
+    div#header-title {
+        padding: 15vh 10vw;
+    }
+
+    div#header-title > h1 {
+        font-size: 2rem;
+    }
+    #header-title > h2 {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+    #header-title a {
+        font-size: .8rem;
+        padding: 15px 20px;
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 768px)
 {
     div#header-title {
         padding: 15vh 10vw;
